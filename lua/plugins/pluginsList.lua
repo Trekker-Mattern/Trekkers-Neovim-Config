@@ -1,7 +1,8 @@
 local plugins = {
 
 	-- add your plugins here
-	{ "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
+	--{ "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
+	{'Mofiqul/vscode.nvim', name = "vscode", lazy=false, priority = 1000},
 	{'nvim-telescope/telescope.nvim', version = '*',
 		dependencies = {
 			'nvim-lua/plenary.nvim',
@@ -103,8 +104,7 @@ local plugins = {
 		fuzzy = { implementation = "prefer_rust_with_warning" }
 	  },
 	  opts_extend = { "sources.default" }
-	}
-
+	},
 }
 
 return plugins
