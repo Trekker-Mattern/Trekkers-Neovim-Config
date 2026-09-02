@@ -1,8 +1,8 @@
 local plugins = {
 
 	--{ "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
-	{'Mofiqul/vscode.nvim', name = "vscode", lazy=false, priority = 1000},
 	{'nvim-telescope/telescope.nvim', version = '*',
+		lazy = false,
 		dependencies = {
 			'nvim-lua/plenary.nvim',
 			{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
@@ -120,11 +120,6 @@ local plugins = {
 			  desc = "Quickfix List (Trouble)",
 			},
 		},
-	},
-	{
-		"ThePrimeagen/harpoon",
-		branch = "harpoon2",
-		dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim"}
 	},
 }
 

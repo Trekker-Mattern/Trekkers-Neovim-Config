@@ -1,3 +1,7 @@
+-- Mapleader
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
 vim.opt.tabstop = 4      			   --Number of spaces in a tab
 vim.opt.shiftwidth = 4   			   --Number of spaces for auto-tab
 vim.opt.number = true     		    	 --Display Line Numbers
@@ -28,6 +32,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 		os.exit(1)
 	end
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
@@ -38,12 +43,9 @@ require("lazy").setup({
 	checker =  {enabled = true} ,
 },{})
 
-local builtin = require("telescope.builtin")
-				require("harpoon")
-
 vim.lsp.enable("jdtls")
-vim.lsp.enable("basedpyrite")
+vim.lsp.enable("basedpyright")
+require("keybinds")
 
-require("colorscheme")
 
 
