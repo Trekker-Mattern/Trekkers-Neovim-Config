@@ -45,6 +45,7 @@ require("lazy").setup({
 
 vim.lsp.enable("jdtls")
 vim.lsp.enable("basedpyright")
+vim.lsp.enable("clangd")
 require("keybinds")
 
 

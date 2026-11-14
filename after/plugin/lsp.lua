@@ -13,3 +13,19 @@ vim.lsp.config("jdtls", {
 })
 
 vim.lsp.enable("jdtls")
+vim.lsp.config("sqllens", {
+  cmd = {
+    [[C:\Program Files\nodejs\node.exe]],
+    [[C:\Users\Trekker\AppData\Local\Programs\sql-language-server\node_modules\sqllens-language-server\bin\cli.js]],
+    "--stdio",
+  },
+  cmd_env = {
+    SQLLENS_USER_CONFIG = [[C:\Users\Trekker\AppData\Local\Programs\sql-language-server\.sqllens.json]],
+  },
+  filetypes = { "sql" },
+  root_dir = function(_, on_dir)
+    on_dir(vim.fn.getcwd())
+  end,
+})
+vim.lsp.enable("sqllens")
+
