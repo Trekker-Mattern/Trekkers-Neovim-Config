@@ -9,6 +9,8 @@ vim.opt.relativenumber = true 		     --Display relative Line Numbers
 vim.opt.filetype = "on" 				 --FileName Hilighting
 vim.opt.smartindent = true               --Does Smart Indenting after hitting enter (gg=G to indent whole file)
 
+vim.api.nvim_set_option("clipboard", "unnamed")
+
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
